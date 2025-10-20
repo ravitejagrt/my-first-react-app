@@ -6,7 +6,9 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:8080/hello1", {})
+    axios
+    // .get("http://localhost:8080/hello1", {})
+    .get("https://social-hatti-gravite-fcc007e5.koyeb.app/helloWorld", {})
     .then((response) => setMessage(response.data))
     .catch((error) => console.error("Error fetching API: ", error));
   }, []);
